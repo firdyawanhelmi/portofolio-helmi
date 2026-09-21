@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portofolio-helmi</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Bagian Navigasi (Menu Atas) -->
+    <header>
+        <nav>
+            <div class="logo">Porto<span>Folio.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Bagian Hero (Perkenalan Utama) -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="greeting">Halo, saya</p>
+            <h1>HELMI RAFIF <span class="highlight">FIRDYAWAN</span></h1>
+            <h2>Seorang Pelajar & Calon Web Developer</h2>
+            <p class="description">
+                Selamat datang di portofolio saya. Saya sedang belajar membuat website
+                yang menarik, modern, dan interaktif.
+            </p>
+            <a href="#projects" class="btn">Lihat Karya Saya</a>
+        </div>
+        <div class="hero-image">
+            <!-- Ganti src dengan link foto/gambar siswa nantinya -->
+            <img src="https://uploads.onecompiler.io/44z6bze9z/44z6c4c5t/Screenshot%202026-02-11%20125758.png"
+                alt="Foto Profil Saya" />
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BAGIAN TENTANG & KEAHLIAN (ABOUT SECTION)  -->
+    <!-- ========================================== -->
+    <section id="about" class="about">
+        <h2 class="section-title">Tentang <span>Saya</span></h2>
+
+        <div class="about-content">
+            <!-- Kolom Kiri: Teks Tentang -->
+            <div class="about-text">
+                <h3>Siapa Saya?</h3>
+                <p>
+                    Saya adalah seorang pelajar yang memiliki ketertarikan besar di dunia teknologi, khususnya dalam
+                    pengembangan website (Web Development). Saya suka merancang tampilan web dan terus belajar hal-hal
+                    baru tentang coding.
+                </p>
+                <p>
+                    Tujuan saya adalah menjadi seorang Web Developer profesional yang bisa menciptakan solusi digital
+                    yang bermanfaat bagi banyak orang.
+                </p>
+            </div>
+
+
+            <!-- Kolom Kanan: Daftar Keahlian -->
+            <div class="about-skills">
+                <h3>Keahlian & Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-item">HTML</span>
+                    <span class="skill-item">CSS</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Visual Studio Code</span>
+                    <span class="skill-item">AI</span>
+                    <span class="skill-item">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BAGIAN KARYA SAYA (PROJECTS SECTION)       -->
+    <!-- ========================================== -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Karya <span>Saya</span></h2>
+
+        <!-- Grid untuk membungkus kartu-kartu proyek -->
+        <div class="project-grid">
+
+            <!-- Kartu Proyek 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250" alt="proyek Keuangan">
+                </div>
+                <div class="project-info">
+                    <h3>Sistem Absensi</h3>
+                    <p>Aplikasi web untuk mencatat kehadiran secara digital dengan fitur rekap otomatis.</p>
+                    <a href="https://arta-aturuang.vercel.app/" class="btn-small">Lihat Detail</a>
+                </div>
+            </div>
+
+
+            <!-- Kartu Proyek 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250" alt="Proyek Koper Grosir">
+                </div>
+                <div class="project-info">
+                    <h3>Koper Grosir</h3>
+                    <p>Katalog produk online untuk menampilkan daftar barang grosir beserta harganya.</p>
+                    <a href="#" class="btn-small">Lihat Detail</a>
+                </div>
+            </div>
+
+
+            <!-- Kartu Proyek 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250" alt="Proyek PassKeeper">
+                </div>
+                <div class="project-info">
+                    <h3>PassKeeper</h3>
+                    <p>Aplikasi sederhana untuk menyimpan dan mengelola kata sandi dengan aman.</p>
+                    <a href="#" class="btn-small">Lihat Detail</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Menghubungkan file Javascript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

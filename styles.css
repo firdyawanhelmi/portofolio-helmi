@@ -1,0 +1,293 @@
+/* Reset CSS (Best Practice) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    /* Warna background gelap */
+    color: #f8fafc;
+    /* Warna teks terang */
+}
+
+/* --- Styling Navigasi --- */
+header {
+    background-color: rgba(15, 23, 42, 0.9);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+    /* Warna biru aksen */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* --- Styling Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    min-height: 80vh;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.greeting {
+    color: #38bff8;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0284c7;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1e293b;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+/* ========================================= */
+/* --- STYLING ABOUT SECTION --- */
+/* ========================================= */
+.about {
+    /* Background sedikit lebih terang dari hero (selang-seling) */
+    background-color: #1e293b;
+    padding: 80px 8%;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+
+.section-title span {
+    color: #38bdf8;
+    /* Warna biru aksen */
+}
+
+
+/* Membagi konten menjadi 2 kolom menyamping menggunakan Flexbox */
+.about-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Agar responsif di HP/Tablet */
+}
+
+
+.about-text,
+.about-skills {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.about-text h3,
+.about-skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+
+.about-text p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Styling untuk kotak-kotak skill */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.skill-item {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #38bdf8;
+    transition: 0.3s;
+    cursor: default;
+}
+
+
+.skill-item:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+/* ========================================= */
+/* --- STYLING PROJECTS SECTION --- */
+/* ========================================= */
+.projects {
+    /* Kembali ke background gelap utama */
+    background-color: #0f172a;
+    padding: 80px 8%;
+}
+
+
+/* Membuat susunan kartu otomatis (CSS Grid) */
+.project-grid {
+    display: grid;
+    /* Ini rahasia layout responsif tanpa media query! */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+/* Desain Kartu Proyek */
+.project-card {
+    background-color: #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+    /* Efek melayang saat disentuh */
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.project-info {
+    padding: 20px;
+}
+
+
+.project-info h3 {
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+
+.project-info p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+
+.btn-small:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
