@@ -1,135 +1,259 @@
 <!doctype html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portofolio-helmi</title>
-    <!-- Menghubungkan file CSS -->
+    <meta name="description" content="Helmi Rafif Firdyawan — pelajar dan calon web developer. Membangun website dan aplikasi untuk belajar, bereksperimen, dan memecahkan masalah nyata." />
+    <title>Helmi Rafif Firdyawan — Student Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Bagian Navigasi (Menu Atas) -->
-    <header>
-        <nav>
-            <div class="logo">Porto<span>Folio.</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <!-- Navigasi -->
+    <header class="site-header" id="site-header">
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="#home" aria-label="Helmi Rafif Firdyawan — kembali ke atas">
+                <img class="brand-mark brand-photo" src="assets/foto-profil.png" alt="" aria-hidden="true" width="32" height="32" />
+                <span class="brand-name">Helmi Rafif</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu navigasi">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#about">Tentang</a></li>
+                <li><a href="#stack">Stack</a></li>
                 <li><a href="#projects">Proyek</a></li>
                 <li><a href="#contact">Kontak</a></li>
+                <li class="nav-cta-item">
+                    <a class="nav-cta" href="https://github.com/firdyawanhelmi" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
-    <!-- Bagian Hero (Perkenalan Utama) -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <p class="greeting">Halo, saya</p>
-            <h1>HELMI RAFIF <span class="highlight">FIRDYAWAN</span></h1>
-            <h2>Seorang Pelajar & Calon Web Developer</h2>
-            <p class="description">
-                Selamat datang di portofolio saya. Saya sedang belajar membuat website
-                yang menarik, modern, dan interaktif.
-            </p>
-            <a href="#projects" class="btn">Lihat Karya Saya</a>
-        </div>
-        <div class="hero-image">
-            <!-- Ganti src dengan link foto/gambar siswa nantinya -->
-            <img src="https://uploads.onecompiler.io/44z6bze9z/44z6c4c5t/Screenshot%202026-02-11%20125758.png"
-                alt="Foto Profil Saya" />
-        </div>
-    </section>
 
-    <!-- ========================================== -->
-    <!-- BAGIAN TENTANG & KEAHLIAN (ABOUT SECTION)  -->
-    <!-- ========================================== -->
-    <section id="about" class="about">
-        <h2 class="section-title">Tentang <span>Saya</span></h2>
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-inner">
+                <div class="hero-main">
+                    <div class="hero-content">
+                        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Hello, I&rsquo;m — based in Indonesia</p>
+                        <h1 id="hero-heading" class="hero-title">
+                            HELMI<br />
+                            <span class="hero-title-accent">RAFIF</span>
+                        </h1>
+                        <p class="hero-role">Student <span aria-hidden="true">/</span> Developer <span aria-hidden="true">/</span> Builder</p>
+                        <p class="hero-desc">
+                            Saya membangun website dan aplikasi untuk belajar, bereksperimen,
+                            dan memecahkan masalah nyata. Saat ini fokus di web development —
+                            HTML, CSS, dan JavaScript.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">View Projects</a>
+                            <a href="https://github.com/firdyawanhelmi" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <figure class="hero-visual">
+                        <img
+                            src="assets/foto-profil.png"
+                            alt="Foto profil Helmi Rafif Firdyawan"
+                            width="640"
+                            height="800"
+                            fetchpriority="high"
+                        />
+                        <figcaption>
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Helmi Rafif Firdyawan — Indonesia
+                        </figcaption>
+                    </figure>
+                </div>
+                <dl class="hero-meta">
+                    <div>
+                        <dt>Currently</dt>
+                        <dd><span class="status-dot" aria-hidden="true"></span>Building ARTA — personal finance app</dd>
+                    </div>
+                    <div>
+                        <dt>Focus</dt>
+                        <dd>Web development fundamentals</dd>
+                    </div>
+                    <div>
+                        <dt>Location</dt>
+                        <dd>Indonesia</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-        <div class="about-content">
-            <!-- Kolom Kiri: Teks Tentang -->
-            <div class="about-text">
-                <h3>Siapa Saya?</h3>
-                <p>
-                    Saya adalah seorang pelajar yang memiliki ketertarikan besar di dunia teknologi, khususnya dalam
-                    pengembangan website (Web Development). Saya suka merancang tampilan web dan terus belajar hal-hal
-                    baru tentang coding.
+        <!-- Tentang -->
+        <section id="about" class="section about" aria-labelledby="about-heading">
+            <div class="container">
+                <p class="section-index" aria-hidden="true">01 — Tentang</p>
+                <h2 id="about-heading" class="section-title">Belajar dengan cara membangun.</h2>
+                <div class="about-grid">
+                    <div class="about-story">
+                        <p>
+                            Saya <strong>Helmi Rafif Firdyawan</strong>, seorang pelajar yang tertarik
+                            pada web development. Saya belajar paling cepat bukan dari tutorial
+                            saja — tapi dari merancang, menulis kode, merusak, lalu memperbaikinya.
+                        </p>
+                        <p>
+                            Yang saya suka bangun: antarmuka web yang bersih, aplikasi kecil yang
+                            menyelesaikan masalah sehari-hari, dan eksperimen yang mengajarkan saya
+                            sesuatu yang baru setiap minggu.
+                        </p>
+                        <p class="about-direction">
+                            Arah saya sekarang: memperkuat fundamental frontend, lalu masuk ke
+                            backend dan cara aplikasi nyata menyimpan dan mengelola data.
+                        </p>
+                    </div>
+                    <aside class="about-side" aria-label="Status belajar saat ini">
+                        <h3>Currently learning</h3>
+                        <ul>
+                            <li>JavaScript — DOM &amp; logika aplikasi</li>
+                            <li>Responsive layout &amp; accessibility dasar</li>
+                            <li>Git &amp; alur kerja GitHub</li>
+                            <li>Backend &amp; database <span class="tag-next">next</span></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack -->
+        <section id="stack" class="section stack" aria-labelledby="stack-heading">
+            <div class="container">
+                <p class="section-index" aria-hidden="true">02 — Stack</p>
+                <h2 id="stack-heading" class="section-title">Tools yang saya pakai.</h2>
+                <div class="stack-groups">
+                    <div class="stack-group">
+                        <h3>Core stack</h3>
+                        <p>HTML <span aria-hidden="true">/</span> CSS <span aria-hidden="true">/</span> JavaScript</p>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Tools</h3>
+                        <p>VS Code <span aria-hidden="true">/</span> Git <span aria-hidden="true">/</span> GitHub</p>
+                    </div>
+                    <div class="stack-group">
+                        <h3>Currently exploring</h3>
+                        <p>UI fundamentals <span aria-hidden="true">/</span> Backend <span aria-hidden="true">/</span> Databases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyek -->
+        <section id="projects" class="section projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <p class="section-index" aria-hidden="true">03 — Proyek</p>
+                <h2 id="projects-heading" class="section-title">Karya terpilih.</h2>
+
+                <ol class="project-list">
+                    <li class="project project-featured">
+                        <article aria-labelledby="project-arta">
+                            <div class="project-top">
+                                <span class="project-num" aria-hidden="true">01</span>
+                                <span class="project-status is-live"><span aria-hidden="true"></span>Live</span>
+                            </div>
+                            <h3 id="project-arta">ARTA — Atur Uang</h3>
+                            <p class="project-desc">
+                                Aplikasi personal finance untuk mencatat pemasukan dan pengeluaran,
+                                memantau saldo, dan melihat ringkasan keuangan harian. Proyek utama
+                                yang sedang aktif saya kembangkan.
+                            </p>
+                            <p class="project-tech"><span>Tech:</span> HTML / CSS / JavaScript</p>
+                            <a class="project-link" href="https://arta-aturuang.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                View Project
+                                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </article>
+                    </li>
+
+                    <li class="project">
+                        <article aria-labelledby="project-koper">
+                            <div class="project-top">
+                                <span class="project-num" aria-hidden="true">02</span>
+                                <span class="project-status">In development</span>
+                            </div>
+                            <h3 id="project-koper">Koper Grosir</h3>
+                            <p class="project-desc">
+                                Katalog produk online untuk menampilkan daftar barang grosir
+                                beserta harganya. Sedang dalam pengembangan — belum ada tautan publik.
+                            </p>
+                            <p class="project-tech"><span>Tech:</span> HTML / CSS / JavaScript</p>
+                        </article>
+                    </li>
+
+                    <li class="project">
+                        <article aria-labelledby="project-passkeeper">
+                            <div class="project-top">
+                                <span class="project-num" aria-hidden="true">03</span>
+                                <span class="project-status">In development</span>
+                            </div>
+                            <h3 id="project-passkeeper">PassKeeper</h3>
+                            <p class="project-desc">
+                                Aplikasi sederhana untuk menyimpan dan mengelola kata sandi.
+                                Eksperimen untuk belajar state management dan penyimpanan lokal.
+                            </p>
+                            <p class="project-tech"><span>Tech:</span> HTML / CSS / JavaScript</p>
+                        </article>
+                    </li>
+                </ol>
+
+                <p class="projects-more">
+                    Kode dan eksperimen lain ada di
+                    <a href="https://github.com/firdyawanhelmi?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub saya</a>.
                 </p>
-                <p>
-                    Tujuan saya adalah menjadi seorang Web Developer profesional yang bisa menciptakan solusi digital
-                    yang bermanfaat bagi banyak orang.
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <p class="section-index" aria-hidden="true">04 — Kontak</p>
+                <h2 id="contact-heading" class="contact-title">LET&rsquo;S BUILD<br />SOMETHING<span class="accent-dot" aria-hidden="true">.</span></h2>
+                <p class="contact-desc">
+                    Kalau ingin melihat proyek saya atau sekadar menyapa,
+                    temukan saya di:
                 </p>
+                <ul class="contact-links">
+                    <li>
+                        <a href="https://github.com/firdyawanhelmi" target="_blank" rel="noopener noreferrer">
+                            GitHub
+                            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/firdyawanhelmi/portofolio-helmi" target="_blank" rel="noopener noreferrer">
+                            Source code portfolio ini
+                            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </section>
+    </main>
 
+    <footer class="site-footer">
+        <p>© <span id="year">2026</span> Helmi Rafif Firdyawan</p>
+        <p class="footer-links">
+            <a href="https://github.com/firdyawanhelmi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">·</span>
+            <span>Built with HTML / CSS / JS</span>
+        </p>
+    </footer>
 
-            <!-- Kolom Kanan: Daftar Keahlian -->
-            <div class="about-skills">
-                <h3>Keahlian & Tools</h3>
-                <div class="skills-list">
-                    <span class="skill-item">HTML</span>
-                    <span class="skill-item">CSS</span>
-                    <span class="skill-item">JavaScript</span>
-                    <span class="skill-item">Visual Studio Code</span>
-                    <span class="skill-item">AI</span>
-                    <span class="skill-item">GitHub</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- BAGIAN KARYA SAYA (PROJECTS SECTION)       -->
-    <!-- ========================================== -->
-    <section id="projects" class="projects">
-        <h2 class="section-title">Karya <span>Saya</span></h2>
-
-        <!-- Grid untuk membungkus kartu-kartu proyek -->
-        <div class="project-grid">
-
-            <!-- Kartu Proyek 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/400x250" alt="proyek Keuangan">
-                </div>
-                <div class="project-info">
-                    <h3>Sistem Absensi</h3>
-                    <p>Aplikasi web untuk mencatat kehadiran secara digital dengan fitur rekap otomatis.</p>
-                    <a href="https://arta-aturuang.vercel.app/" class="btn-small">Lihat Detail</a>
-                </div>
-            </div>
-
-
-            <!-- Kartu Proyek 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/400x250" alt="Proyek Koper Grosir">
-                </div>
-                <div class="project-info">
-                    <h3>Koper Grosir</h3>
-                    <p>Katalog produk online untuk menampilkan daftar barang grosir beserta harganya.</p>
-                    <a href="#" class="btn-small">Lihat Detail</a>
-                </div>
-            </div>
-
-
-            <!-- Kartu Proyek 3 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/400x250" alt="Proyek PassKeeper">
-                </div>
-                <div class="project-info">
-                    <h3>PassKeeper</h3>
-                    <p>Aplikasi sederhana untuk menyimpan dan mengelola kata sandi dengan aman.</p>
-                    <a href="#" class="btn-small">Lihat Detail</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Menghubungkan file Javascript -->
     <script src="script.js"></script>
 </body>
-
 </html>
