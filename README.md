@@ -1,12 +1,22 @@
+<div align="center">
+
 # Helmi Rafif — Full-Stack Developer
 
 Saya seorang Full-Stack Developer yang masih belajar. Saya membangun berbagai project untuk memperdalam kemampuan di frontend, backend, mobile development, dan database.
 
-Portfolio: https://firdyawanhelmi.github.io/portofolio-helmi/
+[Portfolio](https://firdyawanhelmi.github.io/portofolio-helmi/)
+
+</div>
 
 ## Tech Stack
 
 Technologies I work with:
+
+<div align="center">
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres&theme=dark)](https://skillicons.dev)
+
+</div>
 
 ### Frontend
 
