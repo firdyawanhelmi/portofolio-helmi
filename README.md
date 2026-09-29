@@ -1,121 +1,82 @@
-# 🌐 Portofolio Pribadi — Helmi Rafif Firdyawan
+# Helmi Rafif — Portfolio
 
-<div align="center">
+Personal portfolio website for showcasing my projects, experiments, and progress while learning web development.
 
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-  ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-  ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+Live: https://firdyawanhelmi.github.io/portofolio-helmi/
 
-  <p align="center">
-    <strong>Website portofolio modern, responsif, dan elegan untuk menampilkan profil keahlian serta karya proyek pengembangan web.</strong>
-  </p>
+## About
 
-  <p align="center">
-    <a href="#-tentang-proyek">Tentang</a> •
-    <a href="#-fitur-utama">Fitur</a> •
-    <a href="#-teknologi--tools">Teknologi</a> •
-    <a href="#-daftar-karya--proyek">Karya & Proyek</a> •
-    <a href="#-struktur-folder">Struktur File</a> •
-    <a href="#-cara-menjalankan-secara-lokal">Menjalankan Proyek</a>
-  </p>
-</div>
+I'm Helmi Rafif Firdyawan, a student learning web development. I learn fastest by building things — designing, writing code, breaking it, then fixing it.
 
----
+This site collects what I'm working on right now: web interfaces, small apps that solve everyday problems, and experiments that teach me something new. Current direction is strengthening frontend fundamentals, then moving into backend and how real apps store data.
 
-## 📌 Tentang Proyek
+The site has four sections: Tentang, Stack, Proyek, and Kontak, plus a hero with a short intro and links to my work.
 
-Website ini merupakan portofolio pribadi milik **Helmi Rafif Firdyawan**, seorang pelajar dan calon Web Developer. Dibuat dengan antarmuka bertema gelap (*dark mode*) yang modern, bersih, dan berfokus pada pengalaman visual yang rapi dan interaktif.
+## Projects
 
-Tujuan utama dari website ini adalah:
-- Memperkenalkan diri dan minat di dunia teknologi & rekayasa perangkat lunak.
-- Menampilkan keahlian teknis serta tools yang dikuasai.
-- Menjadi etalase untuk memamerkan proyek-proyek web yang telah dan sedang dikembangkan.
+### ARTA — Atur Uang
 
----
+Personal finance app for recording income and expenses, tracking balance, and viewing a daily summary. This is the main project I'm actively developing.
 
-## ✨ Fitur Utama
+- Tech: HTML / CSS / JavaScript
+- Status: Live
+- Link: https://arta-aturuang.vercel.app/
 
-- 🎨 **Desain Modern & Dark Theme**: Tampilan bernuansa gelap (*slate dark*) dengan aksen warna biru terang (*sky blue*) yang nyaman dipandang.
-- 🧭 **Navigasi Sticky & Blur**: Header menu dengan efek *glassmorphism* untuk navigasi antar bagian yang mulus.
-- 👤 **Hero Section Informatif**: Perkenalan profil dilengkapi foto dan tombol Call-to-Action (*CTA*).
-- 💡 **Bagian Keahlian (Skills)**: Tampilan badge keahlian dan tools pengembangan yang rapi dan menarik.
-- 💼 **Showcase Proyek (Cards Grid)**: Kartu pameran karya dengan thumbnail preview, deskripsi singkat, dan tautan langsung ke aplikasi.
-- 📱 **Tata Letak Responsif**: Tampilan tetap optimal diakses dari berbagai ukuran layar komputer maupun gawai.
+### Koper Grosir
 
----
+Online product catalog for listing wholesale items and their prices.
 
-## 🛠️ Teknologi & Tools
+- Tech: HTML / CSS / JavaScript
+- Status: In development, no public link yet
 
-| Kategori | Teknologi / Alat |
-| :--- | :--- |
-| **Markup** | HTML5 (Semantik) |
-| **Styling** | Vanilla CSS3 (Flexbox, Grid, CSS Variables, Glassmorphism) |
-| **Scripting** | JavaScript (DOM Manipulation & Interaktivitas) |
-| **Code Editor** | Visual Studio Code |
-| **Version Control** | Git & GitHub |
+### PassKeeper
 
----
+Simple app for storing and managing passwords. An experiment for learning state management and local storage.
 
-## 📂 Daftar Karya & Proyek
+- Tech: HTML / CSS / JavaScript
+- Status: In development, no public link yet
 
-| Nama Proyek | Deskripsi Singkat | Status / Tautan |
-| :--- | :--- | :--- |
-| 📊 **Sistem Absensi** | Aplikasi web untuk pencatatan kehadiran secara digital dengan fitur rekap otomatis. | [Lihat Aplikasi](https://arta-aturuang.vercel.app/) |
-| 🧳 **Koper Grosir** | Katalog produk online untuk menampilkan daftar barang grosir beserta rincian harganya. | *Dalam Pengembangan* |
-| 🔐 **PassKeeper** | Aplikasi sederhana untuk menyimpan dan mengelola kata sandi secara aman. | *Dalam Pengembangan* |
+More code and experiments are on my GitHub: https://github.com/firdyawanhelmi?tab=repositories
 
----
+## Tech Stack
 
-## 📁 Struktur Folder
+Only what's actually used here:
+
+- HTML
+- CSS (vanilla, no framework)
+- JavaScript (vanilla, no build step)
+
+Tools: VS Code, Git, GitHub.
+
+## Design
+
+Dark minimal interface. Near-black background with a single lime accent (`#c8f04b`), Space Grotesk for display and Inter for body. Mobile-first responsive layout, one container width, subtle scroll reveal, and keyboard-friendly details like a skip link, visible focus states, and reduced-motion support.
+
+## Contact
+
+- WhatsApp: 089603085898 (https://wa.me/6289603085898)
+- Email: rafif.firdyawan@gmail.com
+- GitHub: https://github.com/firdyawanhelmi
+- Source code for this portfolio: https://github.com/firdyawanhelmi/portofolio-helmi
+
+## Run Locally
+
+No build system, no dependencies. Clone the repo and open `index.html` in a browser, or use Live Server in VS Code.
+
+```bash
+git clone https://github.com/firdyawanhelmi/portofolio-helmi.git
+cd portofolio-helmi
+```
+
+Then open `index.html`.
+
+## Structure
 
 ```text
 portofolio-helmi/
-├── assets/          # Folder untuk gambar, ikon, dan aset media pendukung
-├── index.html       # Berkas utama struktur halaman web portofolio
-├── styles.css       # Berkas styling dan desain antarmuka (CSS)
-├── script.js        # Berkas interaktivitas dan logika website (JavaScript)
-└── README.md        # Dokumentasi lengkap proyek repositori
+├── assets/foto-profil.png
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 ```
-
----
-
-## 🚀 Cara Menjalankan Secara Lokal
-
-1. **Clone repositori ini:**
-   ```bash
-   git clone https://github.com/firdyawanhelmi/portofolio-helmi.git
-   ```
-
-2. **Masuk ke folder proyek:**
-   ```bash
-   cd portofolio-helmi
-   ```
-
-3. **Buka file di browser:**
-   - Buka file `index.html` langsung melalui browser pilihan Anda (Google Chrome, Edge, Firefox, dll.).
-   - *Atau* jika menggunakan VS Code, gunakan ekstensi **Live Server** (klik kanan pada `index.html` lalu pilih **Open with Live Server**).
-
----
-
-## 🔮 Rencana Pengembangan Selanjutnya (Roadmap)
-
-- [ ] Menambahkan formulir kontak interaktif dan integrasi email / media sosial.
-- [ ] Menambahkan animasi transisi halus saat scroll (*Scroll Reveal / Intersection Observer*).
-- [ ] Menyediakan filter kategori untuk proyek.
-- [ ] Menerapkan GitHub Pages untuk live preview portofolio online.
-
----
-
-## 📬 Kontak & Profil
-
-- **Pengembang**: Helmi Rafif Firdyawan
-- **GitHub**: [@firdyawanhelmi](https://github.com/firdyawanhelmi)
-- **Repositori**: [portofolio-helmi](https://github.com/firdyawanhelmi/portofolio-helmi)
-
----
-
-<div align="center">
-  <sub>Dibuat dengan ❤️ oleh <a href="https://github.com/firdyawanhelmi">Helmi Rafif Firdyawan</a></sub>
-</div>

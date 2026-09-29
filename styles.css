@@ -33,6 +33,7 @@
 }
 
 html {
+    color-scheme: dark;
     scroll-behavior: smooth;
     scroll-padding-top: 84px;
 }
@@ -784,7 +785,12 @@ a {
     font-weight: 600;
     letter-spacing: -0.01em;
     text-decoration: none;
+    overflow-wrap: anywhere;
     transition: color 0.2s var(--ease), padding-left 0.25s var(--ease);
+}
+
+.contact-links a svg {
+    flex-shrink: 0;
 }
 
 .contact-links a:hover {
