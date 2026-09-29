@@ -19,19 +19,19 @@
 
 ## About
 
-I'm a student learning web development. I learn fastest by building things — designing, writing code, breaking it, then fixing it.
+Saya seorang pelajar yang sedang belajar web development. Saya belajar paling cepat dengan cara membangun — merancang, menulis kode, merusak, lalu memperbaikinya.
 
-This portfolio collects what I'm working on: web interfaces, small apps that solve everyday problems, and experiments that teach me something new. Current focus is frontend fundamentals, then backend and how real apps store data.
+Portfolio ini berisi apa yang sedang saya kerjakan: antarmuka web, aplikasi kecil yang menyelesaikan masalah sehari-hari, dan eksperimen yang mengajarkan saya sesuatu yang baru. Fokus saya saat ini adalah fundamental frontend, lalu backend dan cara aplikasi nyata menyimpan data.
 
 ## Projects
 
-| Project | What it is | Status |
+| Proyek | Deskripsi | Status |
 |---|---|---|
-| **ARTA — Atur Uang** | Personal finance app for recording income and expenses, tracking balance, and viewing a daily summary. The main thing I'm actively building. [(live)](https://arta-aturuang.vercel.app/) | ![Live](https://img.shields.io/badge/status-live-brightgreen?style=flat-square) |
-| **Koper Grosir** | Online catalog for listing wholesale products and prices. | ![WIP](https://img.shields.io/badge/status-in_development-yellow?style=flat-square) |
-| **PassKeeper** | Simple app for storing and managing passwords. An experiment for learning state management and local storage. | ![WIP](https://img.shields.io/badge/status-in_development-yellow?style=flat-square) |
+| **ARTA — Atur Uang** | Aplikasi keuangan pribadi untuk mencatat pemasukan dan pengeluaran, memantau saldo, dan melihat ringkasan harian. Proyek utama yang sedang aktif saya kembangkan. [(live)](https://arta-aturuang.vercel.app/) | ![Live](https://img.shields.io/badge/status-live-brightgreen?style=flat-square) |
+| **Koper Grosir** | Katalog online untuk menampilkan daftar barang grosir beserta harganya. | ![WIP](https://img.shields.io/badge/status-in_development-yellow?style=flat-square) |
+| **PassKeeper** | Aplikasi sederhana untuk menyimpan dan mengelola kata sandi. Eksperimen untuk belajar state management dan penyimpanan lokal. | ![WIP](https://img.shields.io/badge/status-in_development-yellow?style=flat-square) |
 
-All three built with HTML / CSS / JavaScript. More experiments: https://github.com/firdyawanhelmi?tab=repositories
+Ketiganya dibangun dengan HTML / CSS / JavaScript. Eksperimen lain ada di: https://github.com/firdyawanhelmi?tab=repositories
 
 ## Tech Stack
 
@@ -41,13 +41,13 @@ All three built with HTML / CSS / JavaScript. More experiments: https://github.c
 
 </div>
 
-Vanilla only — no framework, no build step. Editor: VS Code. Version control: Git + GitHub.
+Murni vanilla — tanpa framework, tanpa build step. Editor: VS Code. Version control: Git + GitHub.
 
-Currently learning: JavaScript DOM logic, responsive layout and basic accessibility, Git workflow — backend and databases next.
+Sedang dipelajari: logika DOM JavaScript, responsive layout dan dasar accessibility, alur kerja Git — selanjutnya backend dan database.
 
 ## Design
 
-Dark minimal interface. Near-black background, one lime accent (`#c8f04b`), Space Grotesk for display and Inter for body. Mobile-first layout, subtle scroll reveal, and keyboard-friendly details — skip link, visible focus states, reduced-motion support.
+Antarmuka gelap yang minimal. Background nyaris hitam dengan satu aksen lime (`#c8f04b`), Space Grotesk untuk display dan Inter untuk body. Layout mobile-first yang responsif, animasi scroll-reveal yang halus, dan detail yang ramah keyboard — skip link, focus states yang terlihat, dan dukungan reduced-motion.
 
 ## Contact
 
@@ -63,7 +63,7 @@ git clone https://github.com/firdyawanhelmi/portofolio-helmi.git
 cd portofolio-helmi
 ```
 
-Then open `index.html` in a browser (or Live Server in VS Code). No install, no build.
+Kemudian buka `index.html` di browser (atau Live Server di VS Code). Tanpa install, tanpa build.
 
 ## Structure
 
