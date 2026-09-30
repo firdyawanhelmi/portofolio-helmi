@@ -36,16 +36,59 @@ html {
     color-scheme: dark;
     scroll-behavior: smooth;
     scroll-padding-top: 84px;
+    background-color: #080807;
 }
 
 body {
-    background-color: var(--bg);
+    background-color: #080807;
     color: var(--text);
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     overflow-x: clip;
+    position: relative;
+    isolation: isolate;
+    min-height: 100svh;
+}
+
+/* ---------- Premium minimalist geometric background ---------- */
+/* FIX: positive z-index (negative z-index hides behind html background).
+   Fluid, fixed, responsive: 320px → 2560px+, portrait + landscape. */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #080807;
+    background-image: url("assets/bg-geometric.svg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* Readability veil — light enough that geometry stays visible */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(8, 8, 7, 0.28);
+    pointer-events: none;
+}
+
+.site-header,
+main,
+.site-footer {
+    position: relative;
+    z-index: 2;
 }
 
 img,
@@ -90,17 +133,38 @@ a {
 }
 
 /* ---------- Header / Nav ---------- */
+/* At top: full-width bar menyatu dengan background.
+   On scroll (.is-scrolled via JS): floating oval pill mengecil. */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: var(--bg);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.25s var(--ease);
+    max-width: 100%;
+    margin-inline: auto;
+    background: rgba(8, 8, 7, 0.55);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition:
+        top 0.35s var(--ease),
+        max-width 0.35s var(--ease),
+        margin 0.35s var(--ease),
+        border-radius 0.35s var(--ease),
+        background-color 0.3s var(--ease),
+        border-color 0.3s var(--ease),
+        box-shadow 0.35s var(--ease);
 }
 
 .site-header.is-scrolled {
-    border-bottom-color: var(--border);
+    top: 12px;
+    max-width: min(920px, calc(100% - 1.5rem));
+    background: rgba(12, 12, 11, 0.78);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    border-color: var(--border);
+    border-radius: 999px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 .nav {
@@ -111,6 +175,11 @@ a {
     margin-inline: auto;
     padding: 1rem 1.25rem;
     position: relative;
+    transition: padding 0.35s var(--ease);
+}
+
+.site-header.is-scrolled .nav {
+    padding: 0.55rem 0.6rem 0.55rem 1.1rem;
 }
 
 .brand {
@@ -174,6 +243,11 @@ a {
     transition: transform 0.25s var(--ease), opacity 0.2s;
 }
 
+/* Saat pill: toggle jadi lingkaran agar serasi dengan oval */
+.site-header.is-scrolled .nav-toggle {
+    border-radius: 50%;
+}
+
 .nav-toggle[aria-expanded="true"] span:first-child {
     transform: translateY(4px) rotate(45deg);
 }
@@ -189,13 +263,26 @@ a {
     top: calc(100% + 1px);
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: rgba(8, 8, 7, 0.96);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
     padding: 0.5rem 1.25rem 1.25rem;
 }
 
 .nav-links.is-open {
     display: block;
+}
+
+/* Dropdown mengikuti bentuk header: saat pill jadi kartu floating rounded */
+.site-header.is-scrolled .nav-links {
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .nav-links a {
@@ -239,6 +326,11 @@ a {
 .nav-cta:hover {
     border-color: var(--accent);
     color: var(--accent) !important;
+}
+
+/* CTA jadi pill penuh saat header oval */
+.site-header.is-scrolled .nav-cta {
+    border-radius: 999px;
 }
 
 /* ---------- Hero ---------- */
@@ -854,6 +946,26 @@ a {
     will-change: auto;
 }
 
+/* ---------- Geometric background: responsive tuning ---------- */
+/* Mobile: keep full opacity so pattern stays visible; slightly stronger veil only */
+@media (max-width: 699px) {
+    body::before {
+        opacity: 1;
+        background-position: center top;
+    }
+
+    body::after {
+        background: rgba(8, 8, 7, 0.42);
+    }
+}
+
+/* Ultra-wide / 4K: swap to PNG source for pixel-crisp edges, same geometry */
+@media (min-width: 2000px) {
+    body::before {
+        background-image: url("assets/bg-geometric-4k.png");
+    }
+}
+
 /* ---------- Tablet & desktop ---------- */
 @media (min-width: 700px) {
     .hero-meta {
@@ -870,6 +982,10 @@ a {
 @media (min-width: 900px) {
     .nav {
         padding: 1.125rem 2rem;
+    }
+
+    .site-header.is-scrolled .nav {
+        padding: 0.6rem 0.7rem 0.6rem 1.4rem;
     }
 
     .nav-toggle {

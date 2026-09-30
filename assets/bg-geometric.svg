@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+  <!-- Base: near-black -->
+  <rect width="2560" height="1440" fill="#080807"/>
+
+  <!-- Large left diagonal panel — visible charcoal -->
+  <g>
+    <polygon points="0,0 1020,0 420,1440 0,1440" fill="#10100F"/>
+    <polygon points="0,0 760,0 160,1440 0,1440" fill="#161614"/>
+    <polygon points="0,240 620,0 520,0 0,200" fill="#1E1E1C"/>
+  </g>
+
+  <!-- Large right diagonal structure -->
+  <g>
+    <polygon points="2560,0 2560,1440 1820,1440 2420,0" fill="#10100F"/>
+    <polygon points="2560,120 2560,1440 2020,1440 2500,120" fill="#161614"/>
+    <polygon points="2560,1180 2140,1440 2020,1440 2560,1140" fill="#1E1E1C"/>
+  </g>
+
+  <!-- Bottom architectural wedge -->
+  <g>
+    <polygon points="700,1440 1750,1440 1450,1180 950,1180" fill="#0E0E0D"/>
+    <polygon points="980,1440 1580,1440 1420,1260 1120,1260" fill="#161614"/>
+  </g>
+
+  <!-- Top sparse beam -->
+  <g>
+    <polygon points="1100,0 1680,0 1320,420 980,120" fill="#0E0E0D"/>
+  </g>
+
+  <!-- Outlines left — clearly visible dark-gray -->
+  <g fill="none" stroke="#34342F" stroke-width="2" opacity="0.95">
+    <path d="M -40 80 L 1060 80 L 460 1480"/>
+    <path d="M -40 220 L 880 220 L 340 1480"/>
+    <path d="M 0 0 L 1020 0 L 420 1440"/>
+    <path d="M 760 0 L 160 1440" opacity="0.8"/>
+  </g>
+  <g fill="none" stroke="#2A2A27" stroke-width="1.5" opacity="0.8">
+    <path d="M 120 0 L -20 480 L -20 1440"/>
+  </g>
+
+  <!-- Outlines right -->
+  <g fill="none" stroke="#34342F" stroke-width="2" opacity="0.95">
+    <path d="M 2600 80 L 1500 80 L 2100 1480"/>
+    <path d="M 2600 240 L 1680 240 L 2220 1480"/>
+    <path d="M 2560 0 L 2420 0 L 1820 1440 L 2560 1440"/>
+    <path d="M 2500 120 L 2020 1440" opacity="0.8"/>
+  </g>
+  <g fill="none" stroke="#2A2A27" stroke-width="1.5" opacity="0.7">
+    <path d="M 2440 0 L 1840 1440"/>
+  </g>
+
+  <!-- Central spine — visible on mobile crop -->
+  <g fill="none" stroke="#2E2E2B" stroke-width="1.8" opacity="1">
+    <path d="M 980 -40 L 1320 420 L 1120 1480"/>
+    <path d="M 1240 -40 L 1540 380 L 1320 1480"/>
+    <path d="M 1080 -40 L 700 1480" opacity="0.65"/>
+    <path d="M 1480 -40 L 1860 1480" opacity="0.65"/>
+    <path d="M 700 1180 L 1860 1180" opacity="0.6"/>
+  </g>
+
+  <!-- Polygonal joints -->
+  <g fill="none" stroke="#3A3A36" stroke-width="1.5" opacity="0.85">
+    <polygon points="980,120 1320,420 1120,680 820,320"/>
+    <polygon points="1320,420 1540,380 1340,640 1120,680"/>
+    <polygon points="950,1180 1450,1180 1320,1320 1050,1320"/>
+  </g>
+
+  <!-- Fine hairlines -->
+  <g fill="none" stroke="#262624" stroke-width="1.5" opacity="0.9">
+    <path d="M 0 640 L 2560 240"/>
+    <path d="M 0 980 L 2560 620"/>
+    <path d="M 420 0 L 0 620"/>
+    <path d="M 2140 0 L 2560 560"/>
+    <path d="M 0 1320 L 2560 1050" opacity="0.6"/>
+  </g>
+
+  <!-- Light calm veil in center only — keeps type readable, pattern still visible -->
+  <rect x="700" y="280" width="1160" height="880" fill="#080807" opacity="0.28"/>
+</svg>
