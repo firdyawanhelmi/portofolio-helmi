@@ -35,7 +35,7 @@
 html {
     color-scheme: dark;
     scroll-behavior: smooth;
-    scroll-padding-top: 84px;
+    scroll-padding-top: 96px;
     background-color: #080807;
 }
 
@@ -133,23 +133,22 @@ a {
 }
 
 /* ---------- Header / Nav ---------- */
-/* At top: full-width bar menyatu dengan background.
-   On scroll (.is-scrolled via JS): floating oval pill mengecil. */
+/* At top: full-bleed bar selebar viewport. On scroll (.is-scrolled via JS):
+   beranimasi menjadi kartu kompak (1120px, radius 16px, 60px) yang mengambang. */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    max-width: 100%;
-    margin-inline: auto;
-    background: rgba(8, 8, 7, 0.55);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(10, 10, 9, 0.6);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border: 1px solid transparent;
     border-radius: 0;
     transition:
         top 0.35s var(--ease),
-        max-width 0.35s var(--ease),
-        margin 0.35s var(--ease),
+        width 0.35s var(--ease),
         border-radius 0.35s var(--ease),
         background-color 0.3s var(--ease),
         border-color 0.3s var(--ease),
@@ -158,28 +157,21 @@ a {
 
 .site-header.is-scrolled {
     top: 12px;
-    max-width: min(920px, calc(100% - 1.5rem));
-    background: rgba(12, 12, 11, 0.78);
-    -webkit-backdrop-filter: blur(18px);
-    backdrop-filter: blur(18px);
+    width: min(var(--container), calc(100% - 2rem));
+    background: rgba(12, 12, 11, 0.85);
     border-color: var(--border);
-    border-radius: 999px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: var(--container);
-    margin-inline: auto;
-    padding: 1rem 1.25rem;
+    gap: 1rem;
+    min-height: 60px;
+    padding: 0 1.25rem;
     position: relative;
-    transition: padding 0.35s var(--ease);
-}
-
-.site-header.is-scrolled .nav {
-    padding: 0.55rem 0.6rem 0.55rem 1.1rem;
 }
 
 .brand {
@@ -217,8 +209,9 @@ a {
 .brand-name {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 
 .nav-toggle {
@@ -243,11 +236,6 @@ a {
     transition: transform 0.25s var(--ease), opacity 0.2s;
 }
 
-/* Saat pill: toggle jadi lingkaran agar serasi dengan oval */
-.site-header.is-scrolled .nav-toggle {
-    border-radius: 50%;
-}
-
 .nav-toggle[aria-expanded="true"] span:first-child {
     transform: translateY(4px) rotate(45deg);
 }
@@ -260,29 +248,32 @@ a {
     list-style: none;
     display: none;
     position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    right: 0;
-    background: rgba(8, 8, 7, 0.96);
+    top: calc(100% + 8px);
+    left: 0.75rem;
+    right: 0.75rem;
+    background: rgba(12, 12, 11, 0.97);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    padding: 0.5rem 1.25rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    padding: 0.5rem;
+    overflow: hidden;
 }
 
 .nav-links.is-open {
     display: block;
 }
 
-/* Dropdown mengikuti bentuk header: saat pill jadi kartu floating rounded */
-.site-header.is-scrolled .nav-links {
-    top: calc(100% + 10px);
-    left: 0;
-    right: 0;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+.nav-links.is-open a {
+    display: flex;
+    width: 100%;
+    padding-inline: 0.75rem;
+    border-radius: 8px;
+}
+
+.nav-links.is-open a:hover {
+    background: var(--surface);
 }
 
 .nav-links a {
@@ -311,15 +302,18 @@ a {
     position: absolute;
     left: 0;
     bottom: 6px;
-    width: 100%;
+    width: 22px;
     height: 2px;
+    border-radius: 2px;
     background: var(--accent);
 }
 
 .nav-cta {
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 0 1rem;
+    border-radius: 8px;
+    padding: 0 0.9rem;
+    min-height: 40px;
+    font-size: 0.875rem;
     color: var(--text) !important;
 }
 
@@ -328,9 +322,13 @@ a {
     color: var(--accent) !important;
 }
 
-/* CTA jadi pill penuh saat header oval */
-.site-header.is-scrolled .nav-cta {
-    border-radius: 999px;
+.nav-links.is-open .nav-cta-item {
+    margin-top: 0.25rem;
+}
+
+.nav-links.is-open .nav-cta {
+    min-height: 44px;
+    justify-content: center;
 }
 
 /* ---------- Hero ---------- */
@@ -966,6 +964,23 @@ a {
     }
 }
 
+/* Very small screens: tighten gutters so brand + toggle never overflow */
+@media (max-width: 399px) {
+    .nav {
+        padding: 0 0.875rem;
+        gap: 0.75rem;
+    }
+
+    .brand {
+        gap: 0.5rem;
+        min-width: 0;
+    }
+
+    .brand-name {
+        font-size: 0.875rem;
+    }
+}
+
 /* ---------- Tablet & desktop ---------- */
 @media (min-width: 700px) {
     .hero-meta {
@@ -981,11 +996,7 @@ a {
 
 @media (min-width: 900px) {
     .nav {
-        padding: 1.125rem 2rem;
-    }
-
-    .site-header.is-scrolled .nav {
-        padding: 0.6rem 0.7rem 0.6rem 1.4rem;
+        padding: 0 1.25rem;
     }
 
     .nav-toggle {
@@ -995,11 +1006,21 @@ a {
     .nav-links {
         display: flex;
         align-items: center;
-        gap: 1.75rem;
+        gap: 1.5rem;
         position: static;
         background: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
         border: 0;
+        border-radius: 0;
+        box-shadow: none;
         padding: 0;
+        overflow: visible;
+    }
+
+    .nav-links a.is-active::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .hero-inner,
