@@ -6,7 +6,7 @@ Saya seorang Full-Stack Developer yang masih belajar. Saya membangun berbagai pr
 
 [Portfolio](https://firdyawanhelmi.github.io/portofolio-helmi/)
 
-</div>
+---
 
 ## Tech Stack
 
@@ -31,7 +31,9 @@ Technologies I work with and learn:
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-Note: portfolio website ini sendiri dibangun dengan HTML / CSS / JavaScript (vanilla, tanpa framework). Daftar di atas adalah stack yang saya gunakan dan pelajari secara umum, bukan berarti semuanya dipakai di website ini.
+<p><em>Note: portfolio website ini sendiri dibangun dengan HTML / CSS / JavaScript (vanilla, tanpa framework). Daftar di atas adalah stack yang saya gunakan dan pelajari secara umum, bukan berarti semuanya dipakai di website ini.</em></p>
+
+---
 
 ## Projects
 
@@ -39,50 +41,56 @@ Note: portfolio website ini sendiri dibangun dengan HTML / CSS / JavaScript (van
 
 Personal finance app for managing personal finances. Mencatat pemasukan dan pengeluaran, memantau saldo, dan melihat ringkasan keuangan harian. Project utama yang sedang aktif saya kembangkan.
 
-- Tech: HTML / CSS / JavaScript
-- Status: live, masih dikembangkan
-- Live: https://arta-aturuang.vercel.app/
+Tech: **HTML / CSS / JavaScript**  
+Status: **Live, masih dikembangkan**  
+🔗 [Live Demo](https://arta-aturuang.vercel.app/)
+
+<br />
 
 ### Koper Grosir
 
 Katalog produk online untuk menampilkan daftar barang grosir beserta harganya.
 
-- Tech: HTML / CSS / JavaScript
-- Status: in development, belum ada link publik
+Tech: **HTML / CSS / JavaScript**  
+Status: **In development, belum ada link publik**
+
+<br />
 
 ### PassKeeper
 
 Aplikasi sederhana untuk menyimpan dan mengelola kata sandi. Eksperimen untuk belajar state management dan penyimpanan lokal.
 
-- Tech: HTML / CSS / JavaScript
-- Status: in development
+Tech: **HTML / CSS / JavaScript**  
+Status: **In development**
 
-Eksperimen lain ada di: https://github.com/firdyawanhelmi?tab=repositories
+<br />
+
+Eksperimen lain ada di: [GitHub Repositories](https://github.com/firdyawanhelmi?tab=repositories)
+
+---
 
 ## Currently Learning
 
-- Full-stack web development
-- Frontend development
-- Backend development (Laravel, Filament)
-- Mobile development (React Native)
-- Database design (MySQL, PostgreSQL)
+Full-stack web development • Frontend development • Backend development (Laravel, Filament)  
+Mobile development (React Native) • Database design (MySQL, PostgreSQL)
+
+---
 
 ## About This Portfolio
 
 Repo ini adalah website portfolio saya. Isinya:
 
-- project yang saya bangun
-- eksperimen
-- proses belajar dan perkembangan kemampuan development saya
+Project yang saya bangun • Eksperimen • Proses belajar dan perkembangan kemampuan development saya
 
 Fokusnya sederhana: menunjukkan apa yang sedang saya kerjakan, tanpa dilebih-lebihkan.
 
+---
+
 ## Contact
 
-- WhatsApp: 089603085898 — https://wa.me/6289603085898
-- Email: rafif.firdyawan@gmail.com — mailto:rafif.firdyawan@gmail.com
-- GitHub: https://github.com/firdyawanhelmi
-- Repo ini: https://github.com/firdyawanhelmi/portofolio-helmi
+[WhatsApp](https://wa.me/6289603085898) • [Email](mailto:rafif.firdyawan@gmail.com) • [GitHub](https://github.com/firdyawanhelmi) • [Repo Ini](https://github.com/firdyawanhelmi/portofolio-helmi)
+
+---
 
 ## Run Locally
 
@@ -92,6 +100,8 @@ cd portofolio-helmi
 ```
 
 Lalu buka `index.html` di browser. Tanpa install, tanpa build.
+
+---
 
 ## Structure
 
@@ -106,3 +116,5 @@ portofolio-helmi/
 ├── script.js
 └── README.md
 ```
+
+</div>
