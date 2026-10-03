@@ -2,41 +2,35 @@
 
 Saya Full Stack Developer yang masih belajar. Fokus saya di frontend, backend, mobile, dan database. Repo ini adalah kode sumber untuk website portofolio saya.
 
-Live: [Portofolio](https://firdyawanhelmi.github.io/portofolio-helmi/)
-
-<h2 align="center">Tech stack</h2>
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres" alt="HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL" />
+  <a href="https://firdyawanhelmi.github.io/portofolio-helmi/">Portofolio</a>
 </p>
 
-<p align="center">
-Frontend<br />
-HTML<br />
-CSS<br />
-JavaScript<br />
-React<br />
-Vue<br />
-React Native
-</p>
+<h2 align="center">TECH STACK</h2>
 
-<p align="center">
-Backend<br />
-Laravel<br />
-Filament
-</p>
+![HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres)
 
-<p align="center">
-Database<br />
-MySQL<br />
-PostgreSQL
-</p>
+Frontend:
+- HTML
+- CSS
+- JavaScript
+- React
+- Vue
+- React Native
+
+Backend:
+- Laravel
+- Filament
+
+Database:
+- MySQL
+- PostgreSQL
 
 Website portofolio ini sendiri dibuat pakai HTML, CSS, dan JavaScript biasa tanpa framework. Daftar di atas adalah teknologi yang saya pakai dan pelajari secara umum.
 
 <h2 align="center">PROJECT</h2>
 
-<h3 align="center">ARTA Atur Uang</h3>
+<h3 align="center">ARTA - Atur Uang</h3>
 
 Aplikasi pencatat keuangan pribadi untuk pemasukan, pengeluaran, saldo, dan ringkasan harian. Ini project utama yang sedang saya kembangkan.
 
@@ -68,14 +62,12 @@ Web development full stack, frontend, backend pakai Laravel dan Filament, mobile
 
 Isinya project yang saya buat, hasil eksperimen, dan catatan perkembangan belajar saya. Tujuannya sederhana, menunjukkan apa yang sedang saya kerjakan apa adanya.
 
-<h2 align="center">Kontak</h2>
+<h2 align="center">CONTACT</h2>
 
-<p align="center">
-  <a href="https://wa.me/6289603085898">WhatsApp</a><br />
-  <a href="mailto:rafif.firdyawan@gmail.com">Email</a><br />
-  <a href="https://github.com/firdyawanhelmi">GitHub</a><br />
-  <a href="https://github.com/firdyawanhelmi/portofolio-helmi">Repo ini</a>
-</p>
+- [WhatsApp](https://wa.me/6289603085898)
+- [Email](mailto:rafif.firdyawan@gmail.com)
+- [GitHub](https://github.com/firdyawanhelmi)
+- [Repo ini](https://github.com/firdyawanhelmi/portofolio-helmi)
 
 <h2 align="center">HOW TO RUN LOCALLY</h2>
 
