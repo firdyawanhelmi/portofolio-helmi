@@ -6,11 +6,31 @@ Live: [Portofolio](https://firdyawanhelmi.github.io/portofolio-helmi/)
 
 <h2 align="center">Tech stack</h2>
 
-![HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres)
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres" alt="HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL" />
+</p>
 
-Frontend: HTML, CSS, JavaScript, React, Vue, React Native.
-Backend: Laravel, Filament.
-Database: MySQL, PostgreSQL.
+<p align="center">
+Frontend<br />
+HTML<br />
+CSS<br />
+JavaScript<br />
+React<br />
+Vue<br />
+React Native
+</p>
+
+<p align="center">
+Backend<br />
+Laravel<br />
+Filament
+</p>
+
+<p align="center">
+Database<br />
+MySQL<br />
+PostgreSQL
+</p>
 
 Website portofolio ini sendiri dibuat pakai HTML, CSS, dan JavaScript biasa tanpa framework. Daftar di atas adalah teknologi yang saya pakai dan pelajari secara umum.
 
@@ -50,10 +70,12 @@ Isinya project yang saya buat, hasil eksperimen, dan catatan perkembangan belaja
 
 <h2 align="center">Kontak</h2>
 
-[WhatsApp](https://wa.me/6289603085898)
-[Email](mailto:rafif.firdyawan@gmail.com)
-[GitHub](https://github.com/firdyawanhelmi)
-[Repo ini](https://github.com/firdyawanhelmi/portofolio-helmi)
+<p align="center">
+  <a href="https://wa.me/6289603085898">WhatsApp</a><br />
+  <a href="mailto:rafif.firdyawan@gmail.com">Email</a><br />
+  <a href="https://github.com/firdyawanhelmi">GitHub</a><br />
+  <a href="https://github.com/firdyawanhelmi/portofolio-helmi">Repo ini</a>
+</p>
 
 <h2 align="center">HOW TO RUN LOCALLY</h2>
 
