@@ -56,9 +56,22 @@
         .map(function (a) { return document.querySelector(a.getAttribute("href")); })
         .filter(Boolean);
 
+    var sideAnchors = Array.prototype.slice.call(
+        document.querySelectorAll('.side-index a[href^="#"]')
+    );
+
     function setActive(id) {
         navAnchors.forEach(function (a) {
             a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+        });
+        sideAnchors.forEach(function (a) {
+            var on = a.getAttribute("href") === "#" + id;
+            a.classList.toggle("is-active", on);
+            if (on) {
+                a.setAttribute("aria-current", "true");
+            } else {
+                a.removeAttribute("aria-current");
+            }
         });
     }
 

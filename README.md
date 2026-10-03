@@ -12,12 +12,6 @@ Saya seorang Full-Stack Developer yang masih belajar. Saya membangun berbagai pr
 
 Technologies I work with:
 
-<div align="center">
-
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres&theme=dark)](https://skillicons.dev)
-
-</div>
-
 ### Frontend
 
 - HTML
@@ -103,7 +97,10 @@ Lalu buka `index.html` di browser. Tanpa install, tanpa build.
 
 ```text
 portofolio-helmi/
-├── assets/foto-profil.png
+├── assets/
+│   ├── foto-profil.png
+│   ├── bg-geometric.svg
+│   └── bg-geometric-4k.png
 ├── index.html
 ├── styles.css
 ├── script.js

@@ -16,7 +16,7 @@
 
     --font-display: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
 
     --space-section: clamp(4.5rem, 10vw, 7.5rem);
     --container: 1120px;
@@ -291,6 +291,14 @@ a {
 
 .nav-links a:hover {
     color: var(--text);
+}
+
+.nav-num {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+    margin-right: 0.375rem;
 }
 
 .nav-links a.is-active {
@@ -679,14 +687,26 @@ a {
 }
 
 .stack-group p {
-    font-family: var(--font-display);
-    font-size: clamp(1.25rem, 3.4vw, 1.75rem);
-    font-weight: 600;
-    letter-spacing: -0.015em;
+    font-family: var(--font-mono);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
 .stack-group p span {
     color: var(--accent);
+}
+
+.stack-count {
+    color: var(--faint);
+}
+
+.stack-note {
+    margin-top: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--faint);
 }
 
 /* ---------- Projects ---------- */
@@ -754,8 +774,16 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.25rem;
     transition: transform 0.25s var(--ease);
+}
+
+.project-type {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-bottom: 0.625rem;
 }
 
 .project:hover h3 {
@@ -770,7 +798,8 @@ a {
 }
 
 .project-tech {
-    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
     color: var(--muted);
     margin-bottom: 1.25rem;
 }
@@ -797,8 +826,11 @@ a {
     align-items: center;
     gap: 0.5rem;
     min-height: 44px;
-    font-weight: 600;
-    font-size: 0.9375rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid var(--accent);
@@ -881,11 +913,35 @@ a {
 
 .contact-links a svg {
     flex-shrink: 0;
+    color: var(--muted);
+}
+
+.contact-label {
+    font-family: var(--font-mono);
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.contact-detail {
+    margin-left: auto;
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+    font-weight: 400;
+    color: var(--muted);
+    text-align: right;
+    overflow-wrap: anywhere;
 }
 
 .contact-links a:hover {
     color: var(--accent);
     padding-left: 0.75rem;
+}
+
+.contact-links a:hover svg {
+    color: var(--accent);
 }
 
 /* ---------- Footer ---------- */
@@ -904,6 +960,9 @@ a {
     display: flex;
     align-items: center;
     gap: 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
 }
 
 .footer-links a {
@@ -918,13 +977,13 @@ a {
     color: var(--accent);
 }
 
-/* ---------- Reveal on scroll (Standard tier: y24 / 600ms / stagger 80ms) ---------- */
+/* ---------- Reveal on scroll (Subtle tier: y24 / 400ms / stagger 80ms) ---------- */
 .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition:
-        opacity 0.6s var(--ease),
-        transform 0.6s var(--ease);
+        opacity 0.4s var(--ease),
+        transform 0.4s var(--ease);
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform;
     backface-visibility: hidden;
@@ -957,18 +1016,34 @@ a {
     }
 }
 
-/* Ultra-wide / 4K: swap to PNG source for pixel-crisp edges, same geometry */
-@media (min-width: 2000px) {
-    body::before {
-        background-image: url("assets/bg-geometric-4k.png");
-    }
-}
+/* Ultra-wide: SVG background scales cleanly to any width, no raster swap needed. */
 
 /* Very small screens: tighten gutters so brand + toggle never overflow */
 @media (max-width: 399px) {
     .nav {
         padding: 0 0.875rem;
         gap: 0.75rem;
+    }
+
+    .contact-detail {
+        font-size: 0.9rem;
+    }
+
+    /* Baris kontak panjang (label + detail + panah) tidak muat sebaris
+       di 320px — susun detail di baris kedua agar tidak terpotong. */
+    .contact-links a {
+        flex-wrap: wrap;
+        gap: 0.25rem 0.75rem;
+    }
+
+    .contact-links a svg {
+        margin-left: auto;
+    }
+
+    .contact-detail {
+        flex-basis: 100%;
+        margin-left: 0;
+        text-align: left;
     }
 
     .brand {
@@ -1058,6 +1133,67 @@ a {
     .project-featured {
         grid-column: 1 / -1;
         padding: 2.5rem;
+    }
+}
+
+/* ---------- Side vertical section index (01–04, kiri) ---------- */
+.side-index {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .side-index {
+        display: block;
+        position: fixed;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 40;
+        background: none;
+        border: 0;
+    }
+
+    .side-index ol {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .side-index a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 32px;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        color: var(--faint);
+        text-decoration: none;
+        transition: color 0.2s var(--ease);
+    }
+
+    .side-index a::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        flex-shrink: 0;
+        background: transparent;
+        transition: background-color 0.2s var(--ease);
+    }
+
+    .side-index a:hover {
+        color: var(--muted);
+    }
+
+    .side-index a.is-active {
+        color: var(--accent);
+    }
+
+    .side-index a.is-active::before {
+        background: var(--accent);
     }
 }
 
