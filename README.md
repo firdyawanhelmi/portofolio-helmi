@@ -8,7 +8,7 @@ Saya Full Stack Developer yang masih belajar. Fokus saya di frontend, backend, m
 
 <h2 align="center">TECH STACK</h2>
 
-![HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres)
+<p align="center"><img src="https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres" alt="HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL" /></p>
 
 Frontend:
 - HTML
@@ -30,7 +30,7 @@ Website portofolio ini sendiri dibuat pakai HTML, CSS, dan JavaScript biasa tanp
 
 <h2 align="center">PROJECT</h2>
 
-<h3 align="center">ARTA - Atur Uang</h3>
+<h3>ARTA - Atur Uang</h3>
 
 Aplikasi pencatat keuangan pribadi untuk pemasukan, pengeluaran, saldo, dan ringkasan harian. Ini project utama yang sedang saya kembangkan.
 
@@ -38,14 +38,14 @@ Tech: HTML, CSS, JavaScript.
 Status: live dan masih dikembangkan.
 Demo: [Demo ARTA](https://arta-aturuang.vercel.app/)
 
-<h3 align="center">Koper Grosir</h3>
+<h3>Koper Grosir</h3>
 
 Katalog online untuk daftar barang grosir beserta harga.
 
 Tech: HTML, CSS, JavaScript.
 Status: masih dalam tahap development, belum ada link publik.
 
-<h3 align="center">PassKeeper</h3>
+<h3>PassKeeper</h3>
 
 Aplikasi sederhana untuk simpan dan kelola kata sandi. Project eksperimen untuk latihan state management dan penyimpanan lokal.
 
