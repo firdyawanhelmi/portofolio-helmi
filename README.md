@@ -10,26 +10,26 @@ Saya seorang Full-Stack Developer yang masih belajar. Saya membangun berbagai pr
 
 ## Tech Stack
 
-Technologies I work with:
+Technologies I work with and learn:
 
 ### Frontend
 
-- HTML
-- CSS
-- JavaScript
-- React.js
-- Vue.js
-- React Native
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
+[![React.js](https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)](https://vuejs.org/)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
 
 ### Backend
 
-- Laravel
-- Filament
+[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
+[![Filament](https://img.shields.io/badge/Filament-FBBF24?style=for-the-badge&logo=filament&logoColor=black)](https://filamentphp.com/)
 
 ### Database
 
-- MySQL
-- PostgreSQL
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 Note: portfolio website ini sendiri dibangun dengan HTML / CSS / JavaScript (vanilla, tanpa framework). Daftar di atas adalah stack yang saya gunakan dan pelajari secara umum, bukan berarti semuanya dipakai di website ini.
 
