@@ -1,10 +1,12 @@
-# Helmi Rafif
+<h1 align="center">HELMI RAFIF FIRDYAWAN</h1>
 
 Saya Full Stack Developer yang masih belajar. Fokus saya di frontend, backend, mobile, dan database. Repo ini adalah kode sumber untuk website portofolio saya.
 
-Live: https://firdyawanhelmi.github.io/portofolio-helmi/
+Live: [Portofolio](https://firdyawanhelmi.github.io/portofolio-helmi/)
 
-## Tech stack
+<h2 align="center">Tech stack</h2>
+
+![HTML, CSS, JavaScript, React, Vue, Laravel, MySQL, PostgreSQL](https://skillicons.dev/icons?i=html,css,js,react,vue,laravel,mysql,postgres)
 
 Frontend: HTML, CSS, JavaScript, React, Vue, React Native.
 Backend: Laravel, Filament.
@@ -12,48 +14,48 @@ Database: MySQL, PostgreSQL.
 
 Website portofolio ini sendiri dibuat pakai HTML, CSS, dan JavaScript biasa tanpa framework. Daftar di atas adalah teknologi yang saya pakai dan pelajari secara umum.
 
-## Project
+<h2 align="center">PROJECT</h2>
 
-### ARTA Atur Uang
+<h3 align="center">ARTA Atur Uang</h3>
 
 Aplikasi pencatat keuangan pribadi untuk pemasukan, pengeluaran, saldo, dan ringkasan harian. Ini project utama yang sedang saya kembangkan.
 
 Tech: HTML, CSS, JavaScript.
 Status: live dan masih dikembangkan.
-Demo: https://arta-aturuang.vercel.app/
+Demo: [Demo ARTA](https://arta-aturuang.vercel.app/)
 
-### Koper Grosir
+<h3 align="center">Koper Grosir</h3>
 
 Katalog online untuk daftar barang grosir beserta harga.
 
 Tech: HTML, CSS, JavaScript.
 Status: masih dalam tahap development, belum ada link publik.
 
-### PassKeeper
+<h3 align="center">PassKeeper</h3>
 
 Aplikasi sederhana untuk simpan dan kelola kata sandi. Project eksperimen untuk latihan state management dan penyimpanan lokal.
 
 Tech: HTML, CSS, JavaScript.
 Status: masih dalam tahap development.
 
-Eksperimen lain bisa dilihat di https://github.com/firdyawanhelmi?tab=repositories
+Eksperimen lain bisa dilihat di [Daftar repository GitHub](https://github.com/firdyawanhelmi?tab=repositories)
 
-## Lagi dipelajari
+<h2 align="center">LEARNING</h2>
 
 Web development full stack, frontend, backend pakai Laravel dan Filament, mobile pakai React Native, dan desain database pakai MySQL dan PostgreSQL.
 
-## Tentang repo ini
+<h2 align="center">ABOUT THIS REPO</h2>
 
 Isinya project yang saya buat, hasil eksperimen, dan catatan perkembangan belajar saya. Tujuannya sederhana, menunjukkan apa yang sedang saya kerjakan apa adanya.
 
-## Kontak
+<h2 align="center">Kontak</h2>
 
-WhatsApp: https://wa.me/6289603085898
-Email: rafif.firdyawan@gmail.com
-GitHub: https://github.com/firdyawanhelmi
-Repo ini: https://github.com/firdyawanhelmi/portofolio-helmi
+[WhatsApp](https://wa.me/6289603085898)
+[Email](mailto:rafif.firdyawan@gmail.com)
+[GitHub](https://github.com/firdyawanhelmi)
+[Repo ini](https://github.com/firdyawanhelmi/portofolio-helmi)
 
-## Cara jalanin lokal
+<h2 align="center">HOW TO RUN LOCALLY</h2>
 
 ```bash
 git clone https://github.com/firdyawanhelmi/portofolio-helmi.git
@@ -62,7 +64,7 @@ cd portofolio-helmi
 
 Lalu buka index.html di browser. Tidak perlu install atau build.
 
-## Struktur project
+<h2 align="center">PROJECT STRUCTURE</h2>
 
 ```text
 portofolio-helmi/
