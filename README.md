@@ -8,11 +8,11 @@ Saya seorang Full-Stack Developer yang masih belajar. Saya membangun berbagai pr
 
 ---
 
-# 🚀 TECH STACK
+# TECH STACK
 
 Technologies I work with and learn:
 
-### 🌐 Frontend
+### Frontend
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
@@ -21,12 +21,12 @@ Technologies I work with and learn:
 [![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)](https://vuejs.org/)
 [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
 
-### ⚙️ Backend
+### Backend
 
 [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
 [![Filament](https://img.shields.io/badge/Filament-FBBF24?style=for-the-badge&logo=filament&logoColor=black)](https://filamentphp.com/)
 
-### 🗄️ Database
+### Database
 
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -35,7 +35,7 @@ Technologies I work with and learn:
 
 ---
 
-# 💻 FEATURED PROJECTS
+# FEATURED PROJECTS
 
 ### ARTA — Atur Uang
 
@@ -69,14 +69,14 @@ Eksperimen lain ada di: [GitHub Repositories](https://github.com/firdyawanhelmi?
 
 ---
 
-# 📚 CURRENTLY LEARNING
+# CURRENTLY LEARNING
 
 Full-stack web development • Frontend development • Backend development (Laravel, Filament)  
 Mobile development (React Native) • Database design (MySQL, PostgreSQL)
 
 ---
 
-# 📖 ABOUT THIS PORTFOLIO
+# ABOUT THIS PORTFOLIO
 
 Repo ini adalah website portfolio saya. Isinya:
 
@@ -86,13 +86,13 @@ Fokusnya sederhana: menunjukkan apa yang sedang saya kerjakan, tanpa dilebih-leb
 
 ---
 
-# 📬 GET IN TOUCH
+# GET IN TOUCH
 
 [WhatsApp](https://wa.me/6289603085898) • [Email](mailto:rafif.firdyawan@gmail.com) • [GitHub](https://github.com/firdyawanhelmi) • [Repo Ini](https://github.com/firdyawanhelmi/portofolio-helmi)
 
 ---
 
-# 🛠️ RUN LOCALLY
+# RUN LOCALLY
 
 ```bash
 git clone https://github.com/firdyawanhelmi/portofolio-helmi.git
@@ -103,7 +103,7 @@ Lalu buka `index.html` di browser. Tanpa install, tanpa build.
 
 ---
 
-# 📁 PROJECT STRUCTURE
+# PROJECT STRUCTURE
 
 ```text
 portofolio-helmi/
