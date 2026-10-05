@@ -389,6 +389,10 @@ a {
     pointer-events: none;
 }
 
+.hero-visual picture {
+    display: block;
+}
+
 .hero-visual img {
     width: 100%;
     height: auto;

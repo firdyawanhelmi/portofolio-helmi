@@ -59,8 +59,11 @@
     <header class="site-header" id="site-header">
         <nav class="nav" aria-label="Navigasi utama">
             <a class="brand" href="#home" aria-label="Helmi Rafif Firdyawan — kembali ke atas">
-                <img class="brand-mark brand-photo" src="assets/foto-profil.png" alt="" aria-hidden="true" width="32"
-                    height="32" />
+                <picture style="display:inline-flex">
+                    <source srcset="assets/foto-profil.webp" type="image/webp" />
+                    <img class="brand-mark brand-photo" src="assets/foto-profil.png" alt="" aria-hidden="true"
+                        width="32" height="32" decoding="async" />
+                </picture>
                 <span class="brand-name">Helmi Rafif</span>
             </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
@@ -126,8 +129,11 @@
                         </div>
                     </div>
                     <figure class="hero-visual">
-                        <img src="assets/foto-profil.png" alt="Foto profil Helmi Rafif Firdyawan" width="640"
-                            height="800" fetchpriority="high" />
+                        <picture>
+                            <source srcset="assets/foto-profil.webp" type="image/webp" />
+                            <img src="assets/foto-profil.png" alt="Foto profil Helmi Rafif Firdyawan" width="640"
+                                height="800" fetchpriority="high" decoding="async" />
+                        </picture>
                         <figcaption>
                             <span class="status-dot" aria-hidden="true"></span>
                             Profile / Helmi Rafif Firdyawan · ID
