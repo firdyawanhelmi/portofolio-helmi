@@ -89,12 +89,28 @@
         sections.forEach(function (s) { observer.observe(s); });
     }
 
+    /* Boot splash — "PORTFOLIO SYSTEM BOOT" (~3s).
+       - Markup statis di HTML biar langsung ter-paint; JS hanya menganimasikan.
+       - Progress berbasis waktu (nyata 0→100), tidak menunggu image/API.
+       - Hero reveal ditahan sampai splash selesai (lihat finishBoot). */
+    var BOOT_STEPS = [
+        [0, "01", "INITIALIZING PORTFOLIO"],
+        [22, "02", "LOADING CORE"],
+        [45, "03", "LOADING PROJECTS"],
+        [68, "04", "LOADING STACK"],
+        [88, "05", "CHECKING INTERFACE"]
+    ];
+    var BOOT_DURATION = reduceMotion ? 500 : 3000;
+    var BOOT_HOLD = reduceMotion ? 80 : 280;
+
     /* Editorial scroll reveal — Standard tier (y24 / 600ms / stagger 80ms).
        - No-JS fallback: .reveal hanya ditambah via JS, jadi tanpa JS konten tetap terlihat.
-       - Reduced motion: skip semua animasi, render final state langsung. */
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-        return;
-    }
+       - Reduced motion: skip semua animasi, render final state langsung.
+       - Dipanggil setelah boot selesai agar entrance hero tidak main di balik splash. */
+    function initReveal() {
+        if (reduceMotion || !("IntersectionObserver" in window)) {
+            return;
+        }
 
     function addReveal(el, delayMs, useScale) {
         if (!el || el.classList.contains("reveal")) {
@@ -186,4 +202,105 @@
         document.querySelectorAll(".reveal"),
         function (el) { revealObserver.observe(el); }
     );
+    }
+
+    /* Jalankan boot; panggil initReveal saat splash mulai exit agar hero
+       stagger-in berbarengan dengan fade-out splash (tanpa layout jump). */
+    (function runBoot() {
+        var boot = document.getElementById("boot");
+        if (!boot) {
+            initReveal();
+            return;
+        }
+
+        var indexEl = document.getElementById("boot-index");
+        var labelEl = document.getElementById("boot-label");
+        var barEl = document.getElementById("boot-progress");
+        var fillEl = document.getElementById("boot-fill");
+        var pctEl = document.getElementById("boot-pct");
+        var finished = false;
+        var startTime = null;
+
+        document.documentElement.classList.add("is-booting");
+
+        function setStep(step) {
+            if (indexEl) {
+                indexEl.textContent = step[1];
+            }
+            if (labelEl) {
+                labelEl.textContent = step[2];
+            }
+        }
+
+        function setProgress(value) {
+            var pct = Math.max(0, Math.min(100, Math.round(value)));
+            if (fillEl) {
+                fillEl.style.width = pct + "%";
+            }
+            if (pctEl) {
+                pctEl.textContent = (pct < 10 ? "0" : "") + pct + "%";
+            }
+            if (barEl) {
+                barEl.setAttribute("aria-valuenow", String(pct));
+            }
+            return pct;
+        }
+
+        function finishBoot() {
+            if (finished) {
+                return;
+            }
+            finished = true;
+            setProgress(100);
+            if (indexEl) {
+                indexEl.textContent = "OK";
+            }
+            if (labelEl) {
+                labelEl.textContent = "SYSTEM READY";
+            }
+            window.setTimeout(function () {
+                boot.classList.add("is-done");
+                initReveal();
+                window.setTimeout(function () {
+                    document.documentElement.classList.remove("is-booting");
+                    if (boot.parentNode) {
+                        boot.parentNode.removeChild(boot);
+                    }
+                }, 500);
+            }, BOOT_HOLD);
+        }
+
+        function tick(timestamp) {
+            if (finished) {
+                return;
+            }
+            if (startTime === null) {
+                startTime = timestamp;
+            }
+            var elapsed = timestamp - startTime;
+            var pct = (elapsed / BOOT_DURATION) * 100;
+            if (pct >= 100) {
+                finishBoot();
+                return;
+            }
+            var current = BOOT_STEPS[0];
+            for (var i = 0; i < BOOT_STEPS.length; i++) {
+                if (pct >= BOOT_STEPS[i][0]) {
+                    current = BOOT_STEPS[i];
+                }
+            }
+            setStep(current);
+            setProgress(pct);
+            window.requestAnimationFrame(tick);
+        }
+
+        if ("requestAnimationFrame" in window) {
+            window.requestAnimationFrame(tick);
+        } else {
+            setProgress(100);
+            finishBoot();
+        }
+        /* Failsafe: jangan pernah mengunci halaman lebih dari ~4 detik. */
+        window.setTimeout(finishBoot, BOOT_DURATION + 2500);
+    })();
 })();

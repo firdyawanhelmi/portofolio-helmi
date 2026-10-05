@@ -32,6 +32,29 @@
 <body>
     <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
+    <!-- Boot splash: loading layer sebelum portfolio (dihapus via JS setelah ready) -->
+    <div class="boot" id="boot" role="status" aria-label="Memuat portfolio">
+        <div class="boot-inner">
+            <p class="boot-brand">HELMI RAFIF <span>/ PORTFOLIO SYSTEM</span></p>
+            <p class="boot-status"><span id="boot-index">01</span><span aria-hidden="true"> / </span><span
+                    id="boot-label">INITIALIZING PORTFOLIO</span><span class="boot-caret" aria-hidden="true"></span>
+            </p>
+            <div class="boot-bar-row">
+                <div class="boot-bar" id="boot-progress" role="progressbar" aria-label="Progres loading"
+                    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="boot-fill"></span></div>
+                <span class="boot-pct" id="boot-pct">00%</span>
+            </div>
+            <p class="boot-foot">FULL-STACK DEVELOPER &middot; ID</p>
+        </div>
+    </div>
+    <noscript>
+        <style>
+            #boot {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+
     <!-- Navigasi -->
     <header class="site-header" id="site-header">
         <nav class="nav" aria-label="Navigasi utama">
