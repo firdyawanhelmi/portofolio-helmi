@@ -20,7 +20,6 @@ Frontend:
 
 Backend:
 - Laravel
-- Filament
 
 Database:
 - MySQL
@@ -56,7 +55,7 @@ Eksperimen lain bisa dilihat di [Daftar repository GitHub](https://github.com/fi
 
 <h2 align="center">LEARNING</h2>
 
-Web development full stack, frontend, backend pakai Laravel dan Filament, mobile pakai React Native, dan desain database pakai MySQL dan PostgreSQL.
+Web development full stack, frontend, backend pakai Laravel, mobile pakai React Native, dan desain database pakai MySQL dan PostgreSQL.
 
 <h2 align="center">ABOUT THIS REPO</h2>
 
@@ -84,7 +83,6 @@ portofolio-helmi/
   assets/
     foto-profil.png
     bg-geometric.svg
-    bg-geometric-4k.png
   index.html
   styles.css
   script.js
