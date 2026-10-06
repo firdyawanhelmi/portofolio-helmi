@@ -180,6 +180,9 @@ a {
     gap: 0.625rem;
     text-decoration: none;
     min-height: 44px;
+    min-width: 0;
+    flex-shrink: 1;
+    overflow: hidden;
 }
 
 .brand-mark {
@@ -212,6 +215,10 @@ a {
     font-size: 0.95rem;
     letter-spacing: -0.01em;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 44vw;
+    min-width: 0;
 }
 
 .nav-toggle {
@@ -439,11 +446,14 @@ a {
 .hero-title {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(3.25rem, 13vw, 8.5rem);
-    line-height: 0.92;
+    font-size: clamp(2.5rem, 10vw, 7rem);
+    line-height: 0.94;
     letter-spacing: -0.035em;
     text-transform: uppercase;
     margin-bottom: 1.25rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-wrap: balance;
 }
 
 .hero-title-accent {
@@ -1057,6 +1067,18 @@ a {
 
     .brand-name {
         font-size: 0.875rem;
+        max-width: 52vw;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-name {
+        font-size: 0.8rem;
+        max-width: 44vw;
+    }
+
+    .hero-title {
+        font-size: clamp(2.25rem, 11vw, 3rem);
     }
 }
 
@@ -1224,86 +1246,29 @@ html.is-booting body {
 
 .boot-inner {
     width: min(440px, 100%);
+    text-align: center;
 }
 
-.boot-brand {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.14em;
-    color: var(--faint);
-    margin-bottom: 1.25rem;
-}
-
-.boot-brand span {
-    color: var(--muted);
-}
-
-.boot-status {
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    letter-spacing: 0.12em;
+.boot-welcome {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 1rem;
-    min-height: 1.65em;
+    margin: 0;
+    animation: boot-welcome-in 0.6s var(--ease) both;
 }
 
-.boot-status #boot-index {
-    color: var(--accent);
-}
-
-.boot-caret {
-    display: inline-block;
-    width: 8px;
-    height: 1em;
-    margin-left: 0.375rem;
-    background: var(--accent);
-    vertical-align: -2px;
-    animation: boot-blink 1s steps(1) infinite;
-}
-
-@keyframes boot-blink {
-    50% {
+@keyframes boot-welcome-in {
+    from {
         opacity: 0;
+        transform: translateY(12px);
     }
-}
 
-.boot-bar-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-}
-
-.boot-bar {
-    flex: 1;
-    min-width: 0;
-    height: 2px;
-    background: var(--border);
-    overflow: hidden;
-}
-
-.boot-bar span {
-    display: block;
-    width: 0;
-    height: 100%;
-    background: var(--accent);
-}
-
-.boot-pct {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    min-width: 4ch;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-}
-
-.boot-foot {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.14em;
-    color: var(--faint);
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .boot.is-done {

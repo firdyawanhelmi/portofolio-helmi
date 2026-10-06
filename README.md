@@ -64,7 +64,6 @@ Isinya project yang saya buat, hasil eksperimen, dan catatan perkembangan belaja
 
 <h2 align="center">CONTACT</h2>
 
-- [WhatsApp](https://wa.me/6289603085898)
 - [Email](mailto:rafif.firdyawan@gmail.com)
 - [GitHub](https://github.com/firdyawanhelmi)
 - [Repo ini](https://github.com/firdyawanhelmi/portofolio-helmi)
