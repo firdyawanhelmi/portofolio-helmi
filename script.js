@@ -89,39 +89,29 @@
         sections.forEach(function (s) { observer.observe(s); });
     }
 
-    /* Boot splash — "Welcome" (0,5 detik).
-       - Markup statis di HTML biar langsung ter-paint; JS hanya menutup.
-       - Hero reveal ditahan sampai splash selesai (lihat finishBoot). */
-    var BOOT_DURATION = 500;
-    var BOOT_HOLD = reduceMotion ? 50 : 100;
-
-    /* Editorial scroll reveal — Standard tier (y24 / 600ms / stagger 80ms).
+    /* Editorial scroll reveal — fade-up ringan, tanpa scale.
        - No-JS fallback: .reveal hanya ditambah via JS, jadi tanpa JS konten tetap terlihat.
-       - Reduced motion: skip semua animasi, render final state langsung.
-       - Dipanggil setelah boot selesai agar entrance hero tidak main di balik splash. */
+       - Reduced motion: skip semua animasi, render final state langsung. */
     function initReveal() {
         if (reduceMotion || !("IntersectionObserver" in window)) {
             return;
         }
 
-    function addReveal(el, delayMs, useScale) {
+    function addReveal(el, delayMs) {
         if (!el || el.classList.contains("reveal")) {
             return;
         }
         el.classList.add("reveal");
-        if (useScale) {
-            el.classList.add("reveal-scale");
-        }
         if (typeof delayMs === "number" && delayMs > 0) {
             // Cap total stagger biar list panjang tidak terasa laggy (maks ~8 item).
             el.style.setProperty("--reveal-delay", Math.min(delayMs, 640) + "ms");
         }
     }
 
-    function staggerChildren(container, childSelector, stepMs, useScale) {
+    function staggerChildren(container, childSelector, stepMs) {
         var children = container.querySelectorAll(childSelector);
         Array.prototype.forEach.call(children, function (child, index) {
-            addReveal(child, index * stepMs, useScale);
+            addReveal(child, index * stepMs);
         });
         return children;
     }
@@ -130,52 +120,53 @@
     var heroStagger = [
         [".eyebrow", 0],
         [".hero-title", 80],
-        [".hero-role", 160],
-        [".hero-desc", 240],
-        [".hero-actions", 320],
+        [".hero-role", 120],
+        [".hero-headline", 160],
+        [".hero-desc", 220],
+        [".hero-actions", 300],
         [".hero-visual", 200],
     ];
     heroStagger.forEach(function (pair) {
         var el = document.querySelector(pair[0]);
-        addReveal(el, pair[1], pair[0] === ".hero-visual");
+        addReveal(el, pair[1]);
     });
     var heroMeta = document.querySelector(".hero-meta");
     if (heroMeta) {
-        staggerChildren(heroMeta, ":scope > div", 80, false);
+        staggerChildren(heroMeta, ":scope > div", 80);
     }
 
     /* 2. Section headers — fade-up satu per satu. */
     Array.prototype.forEach.call(
         document.querySelectorAll(".section-index, .section-title"),
-        function (el) { addReveal(el, 0, false); }
+        function (el) { addReveal(el, 0); }
     );
 
-    /* 3. About — paragraf stagger + kartu samping scale halus. */
+    /* 3. About — paragraf stagger + kartu samping. */
     var aboutStory = document.querySelector(".about-story");
     if (aboutStory) {
-        staggerChildren(aboutStory, "p", 80, false);
+        staggerChildren(aboutStory, "p", 80);
     }
-    addReveal(document.querySelector(".about-side"), 120, true);
+    addReveal(document.querySelector(".about-side"), 120);
 
     /* 4. Stack groups — stagger per baris. */
     var stackGroups = document.querySelector(".stack-groups");
     if (stackGroups) {
-        staggerChildren(stackGroups, ".stack-group", 80, false);
+        staggerChildren(stackGroups, ".stack-group", 80);
     }
 
-    /* 5. Projects — kartu stagger + scale halus, featured sedikit lebih lambat. */
+    /* 5. Projects — kartu stagger tanpa scale. */
     var projectList = document.querySelector(".project-list");
     if (projectList) {
-        staggerChildren(projectList, ".project", 80, true);
+        staggerChildren(projectList, ".project", 80);
     }
-    addReveal(document.querySelector(".projects-more"), 160, false);
+    addReveal(document.querySelector(".projects-more"), 160);
 
     /* 6. Contact — judul, deskripsi, lalu tiap link stagger. */
-    addReveal(document.querySelector(".contact-title"), 0, false);
-    addReveal(document.querySelector(".contact-desc"), 80, false);
+    addReveal(document.querySelector(".contact-title"), 0);
+    addReveal(document.querySelector(".contact-desc"), 80);
     var contactLinks = document.querySelector(".contact-links");
     if (contactLinks) {
-        staggerChildren(contactLinks, "li", 80, false);
+        staggerChildren(contactLinks, "li", 80);
     }
 
     /* Observer: trigger ~top 85% (ala ScrollTrigger start 'top 85%'), sekali main. */
@@ -196,39 +187,6 @@
     );
     }
 
-    /* Jalankan boot Welcome 0,5 detik; panggil initReveal saat splash mulai
-       exit agar hero stagger-in berbarengan dengan fade-out splash. */
-    (function runBoot() {
-        var boot = document.getElementById("boot");
-        if (!boot) {
-            initReveal();
-            return;
-        }
-
-        var finished = false;
-
-        document.documentElement.classList.add("is-booting");
-
-        function finishBoot() {
-            if (finished) {
-                return;
-            }
-            finished = true;
-            window.setTimeout(function () {
-                boot.classList.add("is-done");
-                initReveal();
-                window.setTimeout(function () {
-                    document.documentElement.classList.remove("is-booting");
-                    if (boot.parentNode) {
-                        boot.parentNode.removeChild(boot);
-                    }
-                }, 500);
-            }, BOOT_HOLD);
-        }
-
-        /* Tampilkan "Welcome" selama 0,5 detik, lalu tutup. */
-        window.setTimeout(finishBoot, BOOT_DURATION);
-        /* Failsafe: jangan pernah mengunci halaman lebih dari ~1,5 detik. */
-        window.setTimeout(finishBoot, BOOT_DURATION + 1000);
-    })();
+    /* Homepage tampil langsung — reveal jalan segera, tanpa splash/penundaan buatan. */
+    initReveal();
 })();
