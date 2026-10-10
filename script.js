@@ -1,4 +1,4 @@
-/* Helmi portfolio — vanilla JS: mobile nav, scroll state, active link, reveal. */
+/* Helmi portfolio — vanilla JS: mobile nav, scroll state, active link, reveal, back-to-top. */
 (function () {
     "use strict";
 
@@ -13,14 +13,24 @@
         yearEl.textContent = String(new Date().getFullYear());
     }
 
-    /* Header border on scroll */
+    /* Header border on scroll + back-to-top visibility */
+    var toTop = document.getElementById("to-top");
     function onScroll() {
         if (header) {
             header.classList.toggle("is-scrolled", window.scrollY > 8);
         }
+        if (toTop) {
+            toTop.hidden = window.scrollY < 600;
+        }
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+
+    if (toTop) {
+        toTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+        });
+    }
 
     /* Mobile menu */
     if (toggle && menu) {

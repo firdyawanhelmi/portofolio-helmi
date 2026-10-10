@@ -65,6 +65,7 @@ Isinya project yang saya buat, hasil eksperimen, dan catatan perkembangan belaja
 
 - [Email](mailto:rafif.firdyawan@gmail.com)
 - [GitHub](https://github.com/firdyawanhelmi)
+- [LinkedIn](https://www.linkedin.com/in/helmifirdyawan)
 - [Repo ini](https://github.com/firdyawanhelmi/portofolio-helmi)
 
 <h2 align="center">HOW TO RUN LOCALLY</h2>

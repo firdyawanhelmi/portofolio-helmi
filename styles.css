@@ -9,10 +9,18 @@
     --surface-2: #191917;
     --text: #f2f0e9;
     --muted: #a3a29a;
-    --faint: #8a897f;
+    --faint: #9a998f;
     --border: #262624;
     --accent: #c8f04b;
     --accent-ink: #131400;
+
+    /* shadcn-style tokens (vanilla port, no dependency) */
+    --primary: var(--accent);
+    --primary-ink: var(--accent-ink);
+    --ring: var(--accent);
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
 
     --font-display: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -107,9 +115,9 @@ a {
 }
 
 :focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 2px;
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
 }
 
 /* Skip link */
@@ -317,16 +325,18 @@ a {
 
 .nav-cta {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     padding: 0 0.9rem;
     min-height: 40px;
     font-size: 0.875rem;
+    font-weight: 500;
     color: var(--text) !important;
 }
 
 .nav-cta:hover {
     border-color: var(--accent);
     color: var(--accent) !important;
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-links.is-open .nav-cta-item {
@@ -371,7 +381,8 @@ a {
     position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     padding: 0.625rem 0.625rem 0;
 }
 
@@ -398,7 +409,7 @@ a {
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 2px;
+    border-radius: 6px;
     background: #22221f;
     filter: saturate(0.94) contrast(1.02);
 }
@@ -484,14 +495,17 @@ a {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    min-height: 48px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
+    min-height: 44px;
+    padding: 0.65rem 1.25rem;
+    font-weight: 500;
     font-size: 0.9375rem;
+    line-height: 1.2;
+    white-space: nowrap;
     text-decoration: none;
-    border-radius: var(--radius);
-    transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    border-radius: var(--radius-md);
+    transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 
 .btn svg {
@@ -503,9 +517,10 @@ a {
 }
 
 .btn-primary {
-    background: var(--accent);
-    color: var(--accent-ink);
-    border: 1px solid var(--accent);
+    background: var(--primary);
+    color: var(--primary-ink);
+    border: 1px solid var(--primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
@@ -617,7 +632,8 @@ a {
 .about-side {
     border: 1px solid var(--border);
     background: var(--surface);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     padding: 1.5rem;
     align-self: start;
 }
@@ -707,6 +723,18 @@ a {
     color: var(--faint);
 }
 
+.stack-note a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.stack-note a:hover {
+    color: var(--accent);
+}
+
 /* ---------- Projects ---------- */
 .project-list {
     list-style: none;
@@ -717,9 +745,10 @@ a {
 .project {
     border: 1px solid var(--border);
     background: var(--surface);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     padding: 1.5rem;
-    transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
+    transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .project:hover {
@@ -737,12 +766,15 @@ a {
 .project-status {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    line-height: 1;
     color: var(--muted);
+    background: transparent;
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.75rem;
 }
 
 .project-status.is-live {
@@ -966,14 +998,15 @@ a {
     justify-content: space-between;
     gap: 1rem;
     min-height: 60px;
-    padding: 1rem 0.25rem;
+    padding: 1rem 0.75rem;
     font-family: var(--font-display);
     font-size: 1.125rem;
     font-weight: 600;
     letter-spacing: -0.01em;
     text-decoration: none;
+    border-radius: var(--radius-md);
     overflow-wrap: anywhere;
-    transition: color 0.2s var(--ease), padding-left 0.25s var(--ease);
+    transition: color 0.2s var(--ease), background-color 0.2s var(--ease), padding-left 0.25s var(--ease);
 }
 
 .contact-links a svg {
@@ -1002,11 +1035,41 @@ a {
 
 .contact-links a:hover {
     color: var(--accent);
+    background: var(--surface);
     padding-left: 0.75rem;
 }
 
 .contact-links a:hover svg {
     color: var(--accent);
+}
+
+/* Back-to-top: tombol aksi, bukan dekorasi */
+.to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--text);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.to-top:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.to-top[hidden] {
+    display: none;
 }
 
 /* ---------- Footer ---------- */
